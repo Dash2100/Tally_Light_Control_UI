@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tally Light Control</title>
+</head>
+
+<body>
+    <nav class="topnav">
+        Tally Light Control
+        <button class="btn logout-btn">
+            登出
+        </button>
+    </nav>
+    <div class="panel-main">
+        <div class="panel-row">
+            <p class="text">ATEM IP:</p>
+            <input class="atemip textbox" type="text">
+            <button class="btn connect-btn">連線</button>
+        </div>
+        <div class="panel-row">
+            <button class="btn find-btn">尋找裝置</button>
+            <input id="auto-connect" type="checkbox" checked="checked">
+            <p class="auto-find">自動尋找</p>
+        </div>
+
+        <table id="control">
+            <tr>
+                <th>編號</th>
+                <th>IP</th>
+                <th>燈號</th>
+                <th>其他功能</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>192.168.50.240</td>
+                <td>----</td>
+                <td>尋找</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>192.168.50.240</td>
+                <td>----</td>
+                <td>尋找</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>192.168.50.240</td>
+                <td>----</td>
+                <td>尋找</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</body>
+
+</html>

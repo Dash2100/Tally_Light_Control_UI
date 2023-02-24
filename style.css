@@ -27,7 +27,7 @@ p {
     border: 2px solid #969696 !important;
 }
 
-.swal2-styled.swal2-confirm:focus{
+.swal2-styled.swal2-confirm:focus {
     box-shadow: 0 0 0 0;
 }
 
@@ -173,7 +173,7 @@ hr.login-hr {
 .btn-ctrlfind {
     background-color: #2f8a4a;
     color: #FFFFFF;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -223,7 +223,7 @@ hr.login-hr {
     background-color: #202020;
     border: 2px solid #696969;
     border-radius: 10px;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 200px);
 }
 
 table {
@@ -260,4 +260,45 @@ tr:last-child td:first-child {
 
 tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
+}
+
+.select-box {
+    position: relative;
+    width: 60px;
+}
+
+.select-box select {
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #393939;
+    color: #FFFFFF;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.select-box:after {
+    content: '\25BC';
+    font-size: 14px;
+    color: rgb(159, 159, 159);
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.select-box select:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.select-box select option[disabled] {
+    display: none;
+}
+
+.select-box select option {
+    font-size: 16px;
 }

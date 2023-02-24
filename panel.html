@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="panel.html"></script>
     <title>Tally Light Control</title>
 </head>
 
@@ -22,44 +23,43 @@
             <input class="atemip textbox" type="text">
             <button class="btn connect-btn">連線</button>
         </div>
-        <div class="panel-row">
-            <button class="btn find-btn">尋找裝置</button>
-            <input id="auto-connect" type="checkbox" checked="checked">
-            <p class="auto-find">自動尋找</p>
-        </div>
 
-        <table id="control">
-            <tr class="top">
-                <th>編號</th>
-                <th>IP</th>
-                <th>燈號</th>
-                <th>其他功能</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>192.168.50.240</td>
-                <td>----</td>
-                <td>
-                    <button class="btn btn-ctrlfind">尋找</button>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>192.168.50.240</td>
-                <td>----</td>
-                <td>
-                    <button class="btn btn-ctrlfind">尋找</button>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>192.168.50.240</td>
-                <td>----</td>
-                <td>
-                    <button class="btn btn-ctrlfind">尋找</button>
-                </td>
-            </tr>
-        </table>
+        <div class="tb">
+            <table id="control">
+                <tr>
+                    <th>編號</th>
+                    <th>IP</th>
+                    <th>燈號</th>
+                    <th>其他功能</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>192.168.50.101</td>
+                        <td>----</td>
+                        <td>
+                            <button class="btn btn-ctrlfind">尋找</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>192.168.50.102</td>
+                        <td>----</td>
+                        <td>
+                            <button class="btn btn-ctrlfind">尋找</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>192.168.50.103</td>
+                        <td>----</td>
+                        <td>
+                            <button class="btn btn-ctrlfind">尋找</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>

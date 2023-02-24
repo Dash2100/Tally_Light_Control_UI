@@ -1,12 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap');
+
 body {
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'JetBrains Mono', monospace;
+    /* font-family: 'Google Sans', sans-serif; */
+    /* font-family: 'Source Code Pro', monospace; */
     margin: 0;
     background-color: #000000;
 }
 
 p {
     margin: 0;
+}
+
+/* swal custom */
+.swal2-popup {
+    background-color: #181717 !important;
+    border: 2px solid #969696;
+    color: aliceblue !important;
+    border-radius: 15px !important;
+    z-index: 999 !important;
+}
+
+.swal2-confirm {
+    border-radius: 5px !important;
+    background-color: #181717 !important;
+    border: 2px solid #969696 !important;
+}
+
+.swal2-styled.swal2-confirm:focus{
+    box-shadow: 0 0 0 0;
+}
+
+.swal2-show {
+    animation: show .15s !important;
+}
+
+.swal2-hide {
+    animation: hide .15s !important;
+}
+
+@keyframes show {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes hide {
+    0% {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0
+    }
 }
 
 .topnav {
@@ -92,14 +147,14 @@ hr.login-hr {
 .logout-btn {
     background-color: #9e4141;
     color: #FFFFFF;
-    top: 15px;
+    top: 17px;
     right: 30px;
-    padding: 10px 20px;
+    padding: 8px 15px;
     position: absolute;
 }
 
 .connect-btn {
-    background-color: #34a054;
+    background-color: #2f8a4a;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: bold;
@@ -109,14 +164,14 @@ hr.login-hr {
 }
 
 .find-btn {
-    background-color: #34a054;
+    background-color: #2f8a4a;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: bold;
 }
 
-.btn-ctrlfind{
-    background-color: #34a054;
+.btn-ctrlfind {
+    background-color: #2f8a4a;
     color: #FFFFFF;
     font-size: 18px;
     font-weight: bold;
@@ -136,13 +191,14 @@ hr.login-hr {
 }
 
 .panel-row {
+    white-space: nowrap;
     display: flex;
 }
 
 .text {
     font-size: 25px;
     color: #FFFFFF;
-    margin: 15px 0;
+    margin: auto 0;
 }
 
 .atemip {
@@ -151,7 +207,7 @@ hr.login-hr {
     color: #FFFFFF;
     margin: 15px 0;
     margin-left: 20px;
-    width: 120px;
+    width: 40%;
     padding: 10px 10px;
 }
 
@@ -162,42 +218,46 @@ hr.login-hr {
     color: #FFFFFF;
 }
 
-#auto-connect {
-    margin-left: 20px;
-}
-
-#control {
-    /* border-radius: 20px; */
+.tb {
     border-collapse: collapse;
+    background-color: #202020;
+    border: 2px solid #696969;
+    border-radius: 10px;
+    height: calc(100vh - 300px);
+}
+
+table {
+    border-collapse: collapse;
+    font-size: 17px;
+    font-weight: bold;
     width: 100%;
-    margin-top: 20px;
-    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: #202020;
+    border-radius: 20px;
 }
 
-#control td,
-#control th {
-    font-size: 18px;
-    color: white;
+th,
+td {
     padding: 8px;
-}
-
-#control tr:nth-child(even) {
-    background-color: #202020;
-    color: white;
-}
-
-#control th {
-    padding-top: 12px;
-    padding-bottom: 12px;
     text-align: left;
+    border-bottom: 2px solid #696969;
+    color: #fff;
+}
+
+th {
     background-color: #202020;
-    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.top{
-    border: 2px solid #696969;
+tr:nth-child(even) {
+    background-color: #000000;
 }
 
-.ctrl-row{
-    border: 2px solid #696969;
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }

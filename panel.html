@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="panel.js"></script>
     <script src="panel.html"></script>
     <title>Tally Light Control</title>
 </head>
@@ -20,8 +22,8 @@
     <div class="panel-main">
         <div class="panel-row">
             <p class="text">ATEM IP:</p>
-            <input class="atemip textbox" type="text">
-            <button class="btn connect-btn">連線</button>
+            <input id="atemip" class="atemip textbox" type="text">
+            <button class="btn connect-btn" onclick="atemip();">連線</button>
         </div>
 
         <div class="tb">
@@ -29,83 +31,36 @@
                 <tr>
                     <th>編號</th>
                     <th>IP</th>
-                    <th>燈號</th>
-                    <th>其他功能</th>
+                    <th>功能</th>
                 </tr>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>192.168.50.101</td>
-                        <td>
-                            <div class="select-box">
-                                <select>
-                                    <option value="" selected disabled>1</option>
-                                    <option value="option1">1</option>
-                                    <option value="option2">2</option>
-                                    <option value="option3">3</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <button class="btn btn-ctrlfind">尋找</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>192.168.50.102</td>
-                        <td>
-                            <div class="select-box">
-                                <select>
-                                    <option value="" selected disabled>1</option>
-                                    <option value="option1">1</option>
-                                    <option value="option2">2</option>
-                                    <option value="option3">3</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <button class="btn btn-ctrlfind">尋找</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>192.168.50.103</td>
-                        <td>
-                            <div class="select-box">
-                                <select>
-                                    <option value="" selected disabled>1</option>
-                                    <option value="option1">1</option>
-                                    <option value="option2">2</option>
-                                    <option value="option3">3</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <button class="btn btn-ctrlfind">尋找</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>192.168.50.103</td>
-                        <td>
-                            <div class="select-box">
-                                <select>
-                                    <option value="" selected disabled>1</option>
-                                    <option value="option1">1</option>
-                                    <option value="option2">2</option>
-                                    <option value="option3">3</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <button class="btn btn-ctrlfind">尋找</button>
-                        </td>
-                    </tr>
+                <tbody id="table-list">
+
                 </tbody>
             </table>
         </div>
-
     </div>
+
+    <script type="text/html" id="selectbox-template">
+        <div class="setBox">
+            <p class="setBox-title">燈號設定</p>
+            <div class="select-box">
+                <select id="opt">
+                    {{options}}
+                </select>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="col-template">
+        <tr>
+            <td>{{id}}</td>
+            <td>{{ip}}</td>
+            <td>
+                <button class="btn btn-ctrlfind" onclick="setTally('{{ip}}')">設定</button>
+                <button class="btn btn-ctrlfind" onclick="find('{{ip}}')">尋找</button>
+            </td>
+        </tr>
+    </script>
 
 </body>
 </body>

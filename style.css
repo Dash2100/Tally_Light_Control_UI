@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap');
 
 body {
-    font-family: 'JetBrains Mono', monospace;
+    /* font-family: 'JetBrains Mono', monospace; */
     /* font-family: 'Google Sans', sans-serif; */
-    /* font-family: 'Source Code Pro', monospace; */
+    font-family: 'Source Code Pro', monospace;
     margin: 0;
     background-color: #000000;
+    user-select: none;
 }
 
 p {
@@ -15,7 +16,7 @@ p {
 /* swal custom */
 .swal2-popup {
     background-color: #181717 !important;
-    border: 2px solid #969696;
+    border: 2px solid #969696 !important;
     color: aliceblue !important;
     border-radius: 15px !important;
     z-index: 999 !important;
@@ -24,7 +25,13 @@ p {
 .swal2-confirm {
     border-radius: 5px !important;
     background-color: #181717 !important;
-    border: 2px solid #969696 !important;
+    border: 2px solid #468259 !important;
+}
+
+.swal2-cancel{
+    border-radius: 5px !important;
+    background-color: #181717 !important;
+    border: 2px solid #9e4141 !important;
 }
 
 .swal2-styled.swal2-confirm:focus {
@@ -219,6 +226,7 @@ hr.login-hr {
 }
 
 .tb {
+    overflow-y: scroll;
     border-collapse: collapse;
     background-color: #202020;
     border: 2px solid #696969;
@@ -301,4 +309,17 @@ tr:last-child td:last-child {
 
 .select-box select option {
     font-size: 16px;
+}
+
+.setBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.setBox-title{
+    font-size: 20px;
+    margin-right: 25px;
 }

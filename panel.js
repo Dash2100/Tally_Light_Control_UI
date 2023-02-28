@@ -144,3 +144,8 @@ function setTally(ip) {
         }
     })
 }
+
+function reloadTally(){
+    $('#table-list').empty();
+    tallyip();
+}

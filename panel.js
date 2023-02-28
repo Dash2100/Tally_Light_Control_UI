@@ -109,16 +109,11 @@ socket.addEventListener('message', event => {
     if (data.get === 'tallyip') {
         ip = data.ip;
         console.log(ip);
-        let options = ''; // 建立空字串
         for (let i = 0; i < ip.length; i++) {
             let template = $('#col-template').text();
             template = template.replace(/{{ip}}/g, ip[i]).replace(/{{id}}/g, i + 1);
             $('#table-list').append(template);
-            options += `<option value="${i + 1}">${i + 1}</option>`; // 將 option 標籤加入字串
         }
-        selectbox = $('#selectbox-template').text();
-        selectbox = selectbox.replace(/{{options}}/g, options);
-        $('#selectbox-template').text(selectbox);
     }
     if (data.get === 'tallylight'){
         if (data.data === 'ok'){
@@ -140,6 +135,10 @@ function setTally(ip) {
         cancelButtonText: '取消',
         preConfirm: () => {
             const select = parseInt(Swal.getPopup().querySelector('#opt').value);
+            if (!select) {
+                Swal.showValidationMessage(`請選擇一個選項`)
+                return;
+            }
             changeid(ip, select);
             return;
         }

@@ -148,4 +148,8 @@ function setTally(ip) {
 function reloadTally(){
     $('#table-list').empty();
     tallyip();
+    Toast.fire({
+        icon: 'success',
+        title: '已重新整理'
+    })
 }

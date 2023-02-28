@@ -6,20 +6,20 @@ socket.addEventListener('open', event => {
     socket.send(JSON.stringify({ get: 'tallyip', }));
 });
 
-//when WebSocket connection failed
-socket.addEventListener('error', event => {
-    swal.fire({
-        title: '錯誤',
-        text: 'WebSocket 連線失敗',
-        icon: 'error',
-        confirmButtonText: '重新整理',
-        allowOutsideClick: false
-    }).then((result) => {
-        if (result.isConfirmed) {
-            location.reload();
-        }
-    })
-});
+// when WebSocket connection failed
+// socket.addEventListener('error', event => {
+//     swal.fire({
+//         title: '錯誤',
+//         text: 'WebSocket 連線失敗',
+//         icon: 'error',
+//         confirmButtonText: '重新整理',
+//         allowOutsideClick: false
+//     }).then((result) => {
+//         if (result.isConfirmed) {
+//             location.reload();
+//         }
+//     })
+// });
 
 const Toast = Swal.mixin({
     toast: true,

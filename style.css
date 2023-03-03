@@ -99,7 +99,7 @@ p {
 .topnav {
     color: #FFFFFF;
     background-color: #262626;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: bold;
     padding: 23px 20px;
     overflow: hidden;
@@ -310,7 +310,7 @@ tr:last-child td:last-child {
 
 .select-box {
     position: relative;
-    width: 60px;
+    width: 80px;
 }
 
 .select-box select {
@@ -331,7 +331,7 @@ tr:last-child td:last-child {
     color: rgb(159, 159, 159);
     position: absolute;
     top: 50%;
-    right: 12px;
+    right: 10px;
     pointer-events: none;
     transform: translateY(-50%);
 }
@@ -360,4 +360,11 @@ tr:last-child td:last-child {
 .setBox-title {
     font-size: 20px;
     margin-right: 25px;
+}
+
+.settings-btn{
+    background-color: #44599c;
+    color: #FFFFFF;
+    width: 40px;
+    height: 40px;
 }

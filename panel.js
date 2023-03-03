@@ -153,3 +153,20 @@ function reloadTally(){
         title: '已重新整理'
     })
 }
+
+function settings(){
+    //swal html settings
+    Swal.fire({
+        title: '設定',
+        html: $('#settings-template').text(),
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: '確定',
+        cancelButtonText: '取消',
+        preConfirm: () => {
+            const opt = Swal.getPopup().querySelector('#type-opt').value;
+            console.log(opt);
+            return;
+        }
+    })
+}
